@@ -40,7 +40,7 @@ st.divider() # 畫一條分隔線
 
 if st.button("! 點我立馬發送通知到 Discord"):
     if not WEBHOOK_URL:
-        st.error("XX! 找不到 Discord Webhook 網址！請確保您已在 Streamlit 的 Secrets 中設定 `DISCORD_WEBHOOK_URL`。")
+        st.error("XX! 找不到 Discord Webhook 網址！請確保您已在 Streamlit 的 Secrets 中設定 `-.streamlit-`。")
     else:
         with st.spinner("正在將訊息打包衝向 Discord..."):
             status = send_discord_webhook(WEBHOOK_URL, input_title, input_content)
